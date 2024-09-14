@@ -49,4 +49,16 @@ config EC_LENOVO_YOGA_C630
 
 	  Say M or Y here to include this support.
 
+config PINEPHONE_OF_HW_PROBER
+	tristate "PinePhone Device Tree Hardware Prober"
+	depends on OF
+	depends on I2C
+	select OF_DYNAMIC
+	default OF
+	help
+	  This option enables the device tree hardware prober for PinePhone.
+	  The driver will probe the correct component variant in
+	  devices that have multiple drop-in options for one component.
+
+
 endif # ARM64_PLATFORM_DEVICES

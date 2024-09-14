@@ -9,6 +9,7 @@
 #define _LINUX_I2C_OF_PROBER_H
 
 #include <linux/kconfig.h>
+#include <linux/types.h>
 
 struct device;
 struct device_node;
